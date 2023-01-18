@@ -13,6 +13,7 @@ export default function App() {
     { id: 6, text: 'This is post number 6', videoLink: '' },
     { id: 7, text: 'This is post number 7', videoLink: '' },
     { id: 8, text: 'This is post number 8', videoLink: '' },
+    { id: 8, text: 'This is post number 8', videoLink: '' },
   ];
 
 
