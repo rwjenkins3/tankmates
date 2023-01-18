@@ -5,7 +5,7 @@ import VideoPost from './component/VideoPost';
 export default function App() {
 
   const feedData = [
-    { id: 1, text: 'This is post number 1', videoLink: '' },
+    { id: 1, text: 'This is post number 1', videoLink: '', webLink: '', user: 'Rob Jenkins', avatar: '' },
     { id: 2, text: 'This is post number 2', videoLink: '' },
     { id: 3, text: 'This is post number 3', videoLink: '' },
     { id: 4, text: 'This is post number 4', videoLink: '' },
@@ -13,7 +13,7 @@ export default function App() {
     { id: 6, text: 'This is post number 6', videoLink: '' },
     { id: 7, text: 'This is post number 7', videoLink: '' },
     { id: 8, text: 'This is post number 8', videoLink: '' },
-    { id: 8, text: 'This is post number 8', videoLink: '' },
+    { id: 9, text: 'This is post number 9', videoLink: '' },
   ];
 
 
