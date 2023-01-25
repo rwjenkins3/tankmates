@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Avatar from './component/Avatar';
 import VideoPost from './component/VideoPost';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
   const renderItem = ({item, index}) => {
     return (
       <View style={styles.postView}>
+        <Avatar />
         <Text>{item.text}</Text>
         <VideoPost />
       </View>
