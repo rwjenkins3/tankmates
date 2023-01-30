@@ -21,9 +21,15 @@ export default function App() {
   const renderItem = ({item, index}) => {
     return (
       <View style={styles.postView}>
-        <Avatar />
-        <Text>{item.text}</Text>
-        <VideoPost />
+        <View style={styles.avatarCol}>
+          <Avatar />
+        </View>
+        <View style={styles.otherCol}>
+          <Text style={styles.txtBold}>{item.user}</Text>
+          <Text style={styles.txt}>{item.text}</Text>
+          <VideoPost />
+        </View>
+        
       </View>
     );
 
@@ -47,23 +53,48 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     marginTop: 30,
     alignItems: 'center',
   },
 
   feedList: {
-    width: '100%'
+    width: '100%',
+    paddingHorizontal: 12
   },
 
   postView: {
     marginHorizontal: 8,
-    marginBottom: 8,
+    marginTop: 12,
     padding: 2,
+    width: '100%',
+    flexDirection: 'row',
+    backgroundColor: '#000'
+  },
+
+  avatarCol: {
+    flexDirection: 'column',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    borderTopColor: 'grey',
-    borderTopWidth: 1, 
-    borderStyle: 'solid'
+    alignItems: 'center',
+    width: '15%',
+    backgroundColor: '#000',
+    marginHorizontal: 12
+  },
+
+  otherCol: {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    flex: 1,
+    backgroundColor: '#000'
+  },
+
+  txt: {
+    color: 'white'
+  },
+
+  txtBold: {
+    color: 'white',
+    fontWeight: 'bold'
   }
+
 });

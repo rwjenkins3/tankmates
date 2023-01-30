@@ -14,7 +14,11 @@ export default function Avatar() {
 
 const styles = StyleSheet.create({
     avatarImage: {
-        width: 20,
-        aspectRatio: 1
+        width: 60,
+        height: undefined,
+        resizeMode: 'contain',
+        aspectRatio: 1,
+        borderRadius: 30
+
     }
 })
