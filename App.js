@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Avatar from './component/Avatar';
+import VideoPlayer from './component/VideoPlayer';
 import VideoPost from './component/VideoPost';
 
 export default function App() {
 
   const feedData = [
-    { id: 1, text: 'This is post number 1', videoLink: '', webLink: '', user: 'Rob Jenkins', avatar: '' },
-    { id: 2, text: 'This is post number 2', videoLink: '' },
-    { id: 3, text: 'This is post number 3', videoLink: '' },
+    { id: 1, text: 'This is post number 1', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 2, text: 'This is post number 2', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+    { id: 3, text: 'This is post number 3', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
     { id: 4, text: 'This is post number 4', videoLink: '' },
     { id: 5, text: 'This is post number 5', videoLink: '' },
     { id: 6, text: 'This is post number 6', videoLink: '' },
@@ -27,7 +28,7 @@ export default function App() {
         <View style={styles.otherCol}>
           <Text style={styles.txtBold}>{item.user}</Text>
           <Text style={styles.txt}>{item.text}</Text>
-          <VideoPost />
+          { item.videoLink !== '' ? <VideoPlayer video={item.videoLink} /> : '' }
         </View>
         
       </View>
