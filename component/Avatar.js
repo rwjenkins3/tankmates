@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     avatarImage: {
         width: 60,
         height: undefined,
-        resizeMode: 'contain',
+        resizeMode: 'cover',
         aspectRatio: 1,
         borderRadius: 30
 
