@@ -3,19 +3,20 @@ import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Avatar from './component/Avatar';
 import VideoPlayer from './component/VideoPlayer';
 import VideoPost from './component/VideoPost';
+import { Weblink } from './component/Weblink';
 
 export default function App() {
 
   const feedData = [
-    { id: 1, text: 'This is post number 1', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
-    { id: 2, text: 'This is post number 2', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
-    { id: 3, text: 'This is post number 3', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
-    { id: 4, text: 'This is post number 4', videoLink: '' },
-    { id: 5, text: 'This is post number 5', videoLink: '' },
-    { id: 6, text: 'This is post number 6', videoLink: '' },
-    { id: 7, text: 'This is post number 7', videoLink: '' },
-    { id: 8, text: 'This is post number 8', videoLink: '' },
-    { id: 9, text: 'This is post number 9', videoLink: '' },
+    { id: 1, text: 'This is post number 1', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', webLink: 'https://www.yahoo.com', user: 'Rob Jenkins', avatar: '' },
+    { id: 2, text: 'This is post number 2', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 3, text: 'This is post number 3', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 4, text: 'This is post number 4', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 5, text: 'This is post number 5', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 6, text: 'This is post number 6', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 7, text: 'This is post number 7', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 8, text: 'This is post number 8', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
+    { id: 9, text: 'This is post number 9', videoLink: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', webLink: '', user: 'Rob Jenkins', avatar: '' },
   ];
 
 
@@ -28,6 +29,7 @@ export default function App() {
         <View style={styles.otherCol}>
           <Text style={styles.txtBold}>{item.user}</Text>
           <Text style={styles.txt}>{item.text}</Text>
+          { item.webLink !== '' ? <Weblink link={item.webLink} /> : '' }
           { item.videoLink !== '' ? <VideoPlayer video={item.videoLink} /> : '' }
         </View>
         
