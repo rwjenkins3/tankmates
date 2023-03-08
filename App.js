@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Avatar from './component/Avatar';
+import IconStrip from './component/IconStrip';
 import VideoPlayer from './component/VideoPlayer';
 import VideoPost from './component/VideoPost';
 import { Weblink } from './component/Weblink';
@@ -31,6 +32,8 @@ export default function App() {
           <Text style={styles.txt}>{item.text}</Text>
           { item.webLink !== '' ? <Weblink link={item.webLink} /> : '' }
           { item.videoLink !== '' ? <VideoPlayer video={item.videoLink} /> : '' }
+
+          <IconStrip />
         </View>
         
       </View>
